@@ -5,7 +5,7 @@ description = "Design System do Governo Federal Brasileiro projetos derivados do
 keywords = ["django", "govbrds"]
 license = {file = "LICENSE"}
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.8"
 dependencies = ["Django>=4.2"]
 
 authors = [
