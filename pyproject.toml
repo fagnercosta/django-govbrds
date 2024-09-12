@@ -2,6 +2,35 @@
 name = "django-govbrds"
 version = "0.0.1"
 description = "Design System do Governo Federal Brasileiro projetos derivados do Django"
+keywords = ["django", "govbrds"]
+license = {file = "LICENSE"}
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
+
+authors = [
+    {name = "Fabio Santos", email = "fabio@voreios.com.br"}
+]
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Web Environment",
+  "Framework :: Django",
+  "Framework :: Django :: 4.2",
+  "Framework :: Django :: 5.0",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Utilities",
+]
+dependencies = ["Django>=4.2"]
+
+[tool.coverage.paths]
+package = ["src/django_govbrds", "*/django_govbrds/src/django_govbrds"]
