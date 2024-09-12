@@ -2,11 +2,19 @@
 name = "django-govbrds"
 version = "0.0.1"
 description = "Design System do Governo Federal Brasileiro projetos derivados do Django"
-keywords = ["django", "govbrds"]
-license = {file = "LICENSE"}
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = ["Django>=4.2"]
+
+keywords = ["django", "govbrds"]
+license = {file = "LICENSE"}
+
+[project.scripts]
+hello = "django_govbrds:hello"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 authors = [
     {name = "Fabio Santos", email = "fabio@voreios.com.br"}
@@ -32,4 +40,4 @@ classifiers = [
 ]
 
 [tool.coverage.paths]
-package = ["src/django_govbrds", "*/django_govbrds/src/django_govbrds"]
+package = ["src/django_govbrds", "*/django-govbrds/src/django_govbrds"]
