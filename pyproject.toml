@@ -6,7 +6,7 @@ keywords = ["django", "govbrds"]
 license = {file = "LICENSE"}
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = ["Django>=4.2"]
 
 authors = [
     {name = "Fabio Santos", email = "fabio@voreios.com.br"}
@@ -30,7 +30,6 @@ classifiers = [
   "Topic :: Software Development :: Libraries",
   "Topic :: Utilities",
 ]
-dependencies = ["Django>=4.2"]
 
 [tool.coverage.paths]
 package = ["src/django_govbrds", "*/django_govbrds/src/django_govbrds"]
