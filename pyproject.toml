@@ -9,9 +9,6 @@ dependencies = ["Django>=4.2"]
 keywords = ["django", "govbrds"]
 license = {file = "LICENSE"}
 
-[project.scripts]
-hello = "django_govbrds:hello"
-
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
