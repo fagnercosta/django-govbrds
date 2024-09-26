@@ -1,0 +1,29 @@
+{% load django_govbrds }
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% govbrds_setting "javascript_in_head" as GOVBRDS_JAVASCRIPT_IN_HEAD %}
+<html lang="{{ LANGUAGE_CODE|default:'pt_br' }}">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Page title -->
+    <title>{% block govbrds_title %}django-govbrds template title{% endblock %}</title>
+    <!-- GovBR-DS CSS -->
+    {% govbrds_css %}
+    <!-- GovBR-DS JavaScript if it is in head -->
+    {% if GOVBRDS_JAVASCRIPT_IN_HEAD %}{% govbrds_javascript %}{% endif %}
+
+  {% block govbrds_extra_head %}{% endblock %}
+</head>
+<body>
+    {% block govbrds_before_content %}{% endblock %}
+    {% block govbrds_content %} CONTENT {% endblock %}
+    {% block govbrds_after_content %}{% endblock %}
+    <!-- GovBR-DS JavaScript if it is in body -->
+    {% if not GOVBRDS_JAVASCRIPT_IN_HEAD %}{% govbrds_javascript %}{% endif %}
+    
+    {% block govbrds_extra_script %}{% endblock %}
+</body>
+    
+</html>
