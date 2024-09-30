@@ -16,14 +16,12 @@
 
   {% block govbrds_extra_head %}{% endblock %}
 </head>
-<body>
+<body class="{% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}">
     {% block govbrds_before_content %}{% endblock %}
     {% block govbrds_content %} CONTENT {% endblock %}
     {% block govbrds_after_content %}{% endblock %}
     <!-- GovBR-DS JavaScript if it is in body -->
     {% if not GOVBRDS_JAVASCRIPT_IN_HEAD %}{% govbrds_javascript %}{% endif %}
     
-    {% block govbrds_extra_script %}{% endblock %}
 </body>
-    
 </html>
